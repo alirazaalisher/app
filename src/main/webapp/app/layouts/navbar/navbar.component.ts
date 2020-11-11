@@ -60,13 +60,13 @@ export class NavbarComponent implements OnInit {
   }
 
   login() {
-    this.modalRef = this.loginModalService.open();
+    this.loginModalService.open();
   }
 
   logout() {
     this.collapseNavbar();
     this.loginService.logout();
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 
   toggleNavbar() {

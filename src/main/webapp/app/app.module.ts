@@ -20,10 +20,12 @@ import { AppEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
-
+import { LoginComponent } from './login/login.component';
+import { LoginModule } from './login/login.module';
 @NgModule({
   imports: [
     BrowserModule,
+    LoginModule,
     NgxWebstorageModule.forRoot({ prefix: 'jhi', separator: '-' }),
     NgJhipsterModule.forRoot({
       // set below to true to make alerts look like toast
@@ -38,7 +40,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
     AppAccountModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     AppEntityModule,
-    AppAppRoutingModule
+    AppAppRoutingModule,
+    LoginModule
   ],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   providers: [

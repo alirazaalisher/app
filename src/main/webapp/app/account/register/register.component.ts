@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   }
 
   openLogin() {
-    this.modalRef = this.loginModalService.open();
+    this.loginModalService.open();
   }
 
   private processError(response: HttpErrorResponse) {
